@@ -1,0 +1,8 @@
+services:
+  app:
+    build:
+      context: .
+      target: final
+    restart: no
+    env_file:
+      - stack.env

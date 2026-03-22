@@ -9,4 +9,11 @@ anyhow = { version = "1.0", default-features = false }
 askama = { version = "0.15", default-features = false, features = ["config", "derive", "std"] }
 chrono = "0.4"
 dotenvy = "0.15"
-lettre = { version = "0.11", default-features = false, features = ["builder", "smtp-transport", "tokio1-native-tls"] }
+lettre = { version = "0.11", default-features = false, features = ["builder", "smtp-transport", "native-tls"] }
+
+[profile.release-prod]
+inherits = "release"
+lto = "fat"
+strip = true
+codegen-units = 1
+panic = "abort"
