@@ -21,7 +21,7 @@ cargo build --locked --profile release-prod && \
 cp ./target/release-prod/$APP_NAME /bin/app
 
 
-FROM alpine:3.18 AS final
+FROM alpine:3.23 AS final
 
 
 ARG UID=10001
