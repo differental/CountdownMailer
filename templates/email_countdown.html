@@ -1,0 +1,12 @@
+{% extends "email_base.html" %}
+
+{% block content %}
+    <div class="header-text">{{ header }}</div>
+    <div class="message-text">{{ message_pre }}</div>
+    <br/>
+    <div class="countdown-number">
+        <span class="countdown-value">{{ number }}</span>
+        <span class="countdown-label">Days</span>
+    </div>
+    <div class="message-text">{{ message_post }}</div>
+{% endblock %}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ subject }}</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                padding: 20px;
+                margin: 0;
+            }
+            .container {
+                max-width: 560px;
+                background: #ffffff;
+                padding: 28px;
+                border-radius: 12px;
+                box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+                margin: auto;
+            }
+            .header-text {
+                font-size: 28px;
+                font-weight: 800;
+                color: #4A71EA;
+                text-align: center;
+                margin: 0 0 20px 0;
+                line-height: 1.2;
+                letter-spacing: 0.02em;
+            }
+            .countdown-number {
+                text-align: center;
+                margin: 0 0 24px 0;
+                line-height: 1;
+            }
+            .countdown-value {
+                display: block;
+                font-size: 72px;
+                font-weight: 800;
+                color: #4A71EA;
+                letter-spacing: 0.03em;
+            }
+            .countdown-label {
+                display: block;
+                margin-top: 8px;
+                font-size: 16px;
+                font-weight: 600;
+                color: #666;
+                text-transform: uppercase;
+                letter-spacing: 0.08em;
+            }
+            .message-text {
+                font-size: 16px;
+                line-height: 1.6;
+                color: #444;
+                white-space: pre-wrap;
+                word-break: break-word;
+                margin-top: 8px;
+            }
+            .footer {
+                font-size: 12px;
+                color: #777;
+                margin-top: 22px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            {% block content %}{% endblock %}
+
+            <div class="footer">Delivered by Countdown Mailer {{ version }}</div>
+        </div>
+    </body>
+</html>
